@@ -1,0 +1,22 @@
+---
+export interface Props {
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  ariaLabel?: string;
+  onClick?: (event: MouseEvent) => void;
+  analyticsId?: string;
+}
+
+const { variant = 'primary', size = 'md', ariaLabel, onClick, analyticsId } = Astro.props;
+---
+
+<button
+  type="button"
+  class={`btn ${variant} ${size}`}
+  aria-label={ariaLabel}
+  data-analytics-id={analyticsId}
+  onclick={onClick}
+  style="min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;"
+>
+  <slot />
+</button>

@@ -1,0 +1,22 @@
+---
+export interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  ariaLabel?: string;
+  analyticsId?: string;
+}
+
+const { href, variant = 'primary', size = 'md', ariaLabel, analyticsId } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`btn ${variant} ${size}`}
+  aria-label={ariaLabel}
+  role="button"
+  data-analytics-id={analyticsId}
+  style="min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;"
+>
+  <slot />
+</a>

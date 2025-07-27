@@ -1,0 +1,48 @@
+---
+export interface Props {
+  class?: string;
+  bg?: 'white' | 'light' | 'gray' | 'none';
+  padding?: boolean;
+  maxWidth?: boolean;
+  spacing?: 'sm' | 'md' | 'lg' | 'xl';
+}
+
+const {
+  class: customClass = '',
+  bg = 'none',
+  padding = true,
+  maxWidth = true,
+  spacing = 'md'
+} = Astro.props;
+
+const bgMap: Record<'white' | 'light' | 'gray' | 'none', string> = {
+  white: 'bg-white',
+  light: 'bg-neutral-50',
+  gray: 'bg-gray-100',
+  none: ''
+};
+
+const spacingMap: Record<'sm' | 'md' | 'lg' | 'xl', string> = {
+  sm: 'py-4',
+  md: 'py-8',
+  lg: 'py-12',
+  xl: 'py-16'
+};
+
+const bgClass = bgMap[bg as keyof typeof bgMap];
+const spacingClass = spacingMap[spacing as keyof typeof spacingMap];
+
+const baseClasses = [bgClass, padding ? spacingClass : '', customClass].filter(Boolean).join(' ');
+---
+
+<section class={baseClasses}>
+  {
+    maxWidth ? (
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <slot />
+      </div>
+    ) : (
+      <slot />
+    )
+  }
+</section>

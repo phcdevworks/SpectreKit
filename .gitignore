@@ -1,0 +1,36 @@
+# === NODE / PACKAGE ===
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# === DIST / BUILD ===
+dist/
+build/
+.temp/
+.temp_build/
+.cache/
+astro.config.mjs.tsbuildinfo
+
+# === SYSTEM / IDE ===
+.DS_Store
+*.log
+*.swp
+*.swo
+*.tmp
+.vscode/
+.idea/
+
+# === TYPESCRIPT ===
+*.tsbuildinfo
+
+# === ENV / SECRETS ===
+.env
+.env.*.local
+
+# === PLAYGROUND (optional preview/demo site) ===
+playground/
+examples/
+
+# === MAC TRASH ===
+.Trashes

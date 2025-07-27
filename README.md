@@ -98,9 +98,7 @@ Open a PR or issue if you’ve got ideas, bug fixes, or component contributions.
 
 ## 🧪 Roadmap
 
--
-
----
+- ***
 
 ## 🧂 License
 
@@ -108,4 +106,3 @@ MIT — free to use, scale, and modify.
 
 > Built by [PHCDevworks](https://phcdevworks.com) for the next-gen web.\
 > Great devs don’t waste time—they deploy with SpectreKit.
-
