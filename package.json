@@ -6,7 +6,9 @@
   "exports": {
     ".": "./src/index.ts",
     "./components/Button.astro": "./components/Button.astro",
+    "./components/ButtonLink.astro": "./components/ButtonLink.astro",
     "./components/Card.astro": "./components/Card.astro",
+    "./components/IconBox.astro": "./components/IconBox.astro",
     "./components/Section.astro": "./components/Section.astro"
   },
   "files": [

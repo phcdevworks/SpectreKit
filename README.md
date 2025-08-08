@@ -54,15 +54,14 @@ import { Button, Card, Section } from '@phcdevworks/spectrekit';
 
 ## 📚 Components
 
-| Component           | Description                                       |
-| ------------------- | ------------------------------------------------- |
-| `Button`            | Flexible button with variant + size options       |
-| `Card`              | Clean layout block with slot support              |
-| `Section`           | Wrapper with spacing + alignment control          |
-| `InfoBoxHorizontal` | CRO-enhanced horizontal feature display           |
-| `IconBox`           | Icon with label/description, perfect for features |
-| `Text`              | Responsive typographic primitives                 |
-| ...more             | New components added weekly                       |
+| Component    | Description                                       |
+| ------------ | ------------------------------------------------- |
+| `Button`     | Flexible button with variant + size options       |
+| `ButtonLink` | Anchor element styled as a button                 |
+| `Card`       | Clean layout block with slot support              |
+| `IconBox`    | Icon with label/description, perfect for features |
+| `Section`    | Wrapper with spacing + alignment control          |
+| ...more      | New components added weekly                       |
 
 > Full docs and preview site coming soon.
 
