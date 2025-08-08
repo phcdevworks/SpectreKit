@@ -1,0 +1,39 @@
+---
+export interface Props {
+  icon: string;
+  size?: 'sm' | 'md' | 'lg';
+  bgColor?: 'white' | 'gray' | 'blue' | 'green' | 'amber' | 'purple';
+  iconColor?: 'white' | 'gray' | 'blue' | 'green' | 'amber' | 'purple';
+  class?: string;
+}
+
+const {
+  icon,
+  size = 'md',
+  bgColor = 'gray',
+  iconColor = 'white',
+  class: customClass = ''
+} = Astro.props;
+
+const sizeMap = {
+  sm: 'w-8 h-8 text-sm',
+  md: 'w-12 h-12 text-xl',
+  lg: 'w-16 h-16 text-2xl'
+} as const;
+
+type SizeKey = keyof typeof sizeMap;
+
+const safeSize = size as SizeKey;
+
+const baseClasses = [
+  'inline-flex items-center justify-center rounded-xl',
+  `bg-${bgColor}-500`,
+  `text-${iconColor}-50`,
+  sizeMap[safeSize],
+  customClass
+].join(' ');
+---
+
+<div class={baseClasses}>
+  {icon}
+</div>
